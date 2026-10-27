@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users (API CRUD)</title>
+</head>
+<body>
+    <h1>Users</h1>
+
+    <!-- نفس الفورم للإضافة والتعديل -->
+    <form id="userForm">
+        <input type="hidden" id="userId">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password (min 8)" minlength="8">
+        <button type="submit" id="submitBtn">Add User</button>
+        <button type="button" id="cancelBtn" hidden>Cancel</button>
+    </form>
+
+    <p id="msg"></p>
+
+    <table border="1">
+        <thead>
+            <tr><th>Name</th><th>Email</th><th>Edit</th><th>Delete</th></tr>
+        </thead>
+        <tbody id="usersBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
